@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://juliocrosario.com/exam/model/user.xsd"
+           targetNamespace="http://juliocrosario.com/exam/model/user.xsd"
+           elementFormDefault="qualified">
+
+    <xs:element name="InputRequest">
+        <xs:complexType>
+            <xs:sequence>
+              <xs:element name="exam" type="tns:exam"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="exam">
+        <xs:sequence>
+            <xs:element name="test1" type="xs:double" />
+            <xs:element name="test2" type="xs:double" />
+            <xs:element name="test3" type="xs:double" />
+        </xs:sequence>
+    </xs:complexType>
+
+   <xs:element name="OutputRequest">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="Grade" type="xs:double" />
+           </xs:sequence>
+       </xs:complexType>
+   </xs:element>
+
+</xs:schema>
